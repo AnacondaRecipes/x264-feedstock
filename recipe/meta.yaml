@@ -24,8 +24,9 @@ requirements:
   build:
     - {{ compiler("c") }}
     - perl
-    - nasm
+    - nasm  # [not (osx and arm64)]
     - make
+    - libtool
   host:
 
 test:
